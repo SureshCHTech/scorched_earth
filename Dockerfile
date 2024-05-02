@@ -5,7 +5,7 @@ FROM jruby:9.1.5.0
 WORKDIR /app
 
 # Copy the Gemfile and Gemfile.lock into the container
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile ./
 
 # Install dependencies using Bundler
 RUN gem install bundler && bundle install --jobs 20 --retry 5
